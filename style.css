@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.col {
+  flex-direction: column;
+}
+.top__bg {
+  background-image: url(img/Vector.png);
+  width: 100%;
+  max-width: 100vw;
+  min-height: 90vh;
+  height: fit-content;
+}
+li {
+  list-style-type: none;
+}
+body {
+  overflow-x: hidden;
+}
+header {
+  padding: 0 15px 0;
+  justify-content: space-between;
+  /* Made some changes within this block */
+  width: 1366px;
+  max-width: calc(100% - 30px);
+  margin: 0 auto;
+  align-items: center;
+  /* End of changes */
+  height: 80px;
+}
+nav {
+  height: inherit;
+  /* Made some changes within this block */
+  width: 350px;
+  max-width: 100%;
+  /* End of changes */
+}
+nav ul {
+  width: 100%;
+  height: inherit;
+  align-items: center;
+  /* Made some changes within this block */
+  justify-content: space-between;
+  /* End of changes */
+}
+
+nav a {
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Made some changes within this block */
+main {
+  position: relative;
+  flex: 1;
+  justify-content: center;
+  padding: 45px 0px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    max-width: calc(100% - 30px);
+    padding: 0 15px;
+}
+
+main .container {
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+main .content {
+  align-items: flex-start;
+  width: 450px;
+  max-width: 100%;
+}
+
+main .content h3 {
+  color: white;
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+main .illustration {
+    width: 500px;
+    max-width: 80%;
+}
+
+.content button {
+    margin-top: 20px;
+  color: white;
+  text-align: center;
+  width: 230px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  background: #5392aa;
+  border-radius: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+/* You might not need to add the white border on hover */
+.content button:hover {
+  transform: translateY(-6px);
+  border-bottom: 5px solid white;
+}
+/* End of changes */
+
+.section-one {
+    padding: 100px 0;
+}
+
+.works {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.work {
+    width: 400px;
+    max-width: 100%;
+}
+
+.work__image {
+    width: 400px;
+    max-width: 100%;
+    background-color: #f0efef;
+    height: 400px;
+}
+
+.work__text {
+    margin-top: 10px;
+    max-width: 400px;
+}
+
+.work:nth-child(2) .work__image {
+    height: 500px;
+}
+
+.section-one button {
+    width: 300px;
+    max-width: 100%;
+    margin: 30px auto 0;
+    display: block;
+    height: 60px;
+    background: #5392aa;
+    border-radius: 10px;
+    border: none;
+}
+
+.section-two {
+    padding: 50px 0;
+}
+
+.team-picture {
+    width: 1200px;
+    max-width: 100%;
+    background-color: #f0efef;
+    height: 300px;
+}
+
+@media only screen and (max-width: 1150px) {
+  nav ul.flex.row {
+    padding-top: 80px;
+    z-index: 2;
+    justify-content: flex-start;
+    background: #5392aa;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 110vh;
+    flex-direction: column;
+    overflow: hidden;
+    transition-duration: 300ms;
+    transform: translateX(-100%);
+  }
+  nav.open ul.flex.row {
+    transform: translateX(0);
+  }
+  nav {
+    width: fit-content;
+  }
+  nav ul.flex.row li {
+    margin-bottom: 40px;
+  }
+  #nav-icon {
+    position: relative;
+    z-index: 4;
+    margin-top: 25px;
+    width: 35px;
+    height: fit-content;
+    cursor: pointer;
+  }
+  #nav-icon div {
+    border-radius: 2px;
+    height: 3px;
+    width: 35px;
+    margin-bottom: 10px;
+    background-color: white;
+    transition-duration: 300ms;
+  }
+  #nav-icon div:nth-child(3) {
+    margin-bottom: 0;
+  }
+  .open #nav-icon div:nth-child(1) {
+    transform: rotateZ(-45deg) translateX(-8px) translateY(10px);
+  }
+  .open #nav-icon div:nth-child(2) {
+    opacity: 0;
+  }
+  .open #nav-icon div:nth-child(3) {
+    transform: rotateZ(45deg) translateX(-8px) translateY(-10px);
+  }
+}
